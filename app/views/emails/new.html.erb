@@ -1,0 +1,22 @@
+<h1>New Email</h1>
+
+<%= form_with scope: :email, url: emails_path, local: true do |form| %>
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_field :address %>
+  </p>
+
+  <p>
+    <%= form.label :subject %><br>
+    <%= form.text_field :subject %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
