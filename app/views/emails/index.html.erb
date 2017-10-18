@@ -1,0 +1,19 @@
+
+<h1>Listing emails</h1>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Subject</th>
+    <th>Text</th>
+  </tr>
+
+  <% @emails.each do |email| %>
+    <tr>
+      <td><%= email.address %></td>
+      <td><%= email.subject %></td>
+      <td><%= email.text %></td>
+      <td><%= link_to 'Show', email_path(email) %></td>
+    </tr>
+  <% end %>
+</table>
