@@ -12,3 +12,6 @@
   <strong>Text:</strong>
   <%= @email.text %>
 </p>
+
+<%= button_to "Emails", emails_path, method: :get %>
+<%= button_to "New Email", new_email_path, method: :get %>

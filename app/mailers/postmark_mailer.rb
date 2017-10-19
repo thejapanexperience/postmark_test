@@ -4,9 +4,9 @@ class PostmarkMailer < ActionMailer::Base
     binding.pry
     mail(
       subject: @email.subject,
-      to: 'richard.mands@sage.com',
+      to: @email.address,
       from: 'richard@eduku.org',
       html_body: @email.text,
-      track_open: 'true')
+      track_opens: 'true')
   end
 end
